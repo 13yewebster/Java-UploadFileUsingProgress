@@ -1,0 +1,74 @@
+$main-color: #3a3a3a;
+$small-margin:5px;
+$medium-margin: 10px;
+$large-margin: 25px;
+$xlarge-margin: 50px;
+$corporate-color: #2350a0;
+$icon-color:#e8ba00;
+$light-color:#a3a3a3;
+$no-margin: 0px;
+$inactiveColor:#999;
+
+/*-------------------------------rounded----------------------------*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin rounded($amount: "5px",$position: null) {
+  @if $position != null {
+    @if $position == "top" or $position == "bottom" {
+      //top or bottom
+      -webkit-border-#{$position}-left-radius: $amount;
+      -moz-border-#{$position}-left-radius: $amount;
+      border-#{$position}-left-radius: $amount;
+
+      -webkit-border-#{$position}-right-radius: $amount;
+      -moz-border-#{$position}-right-radius: $amount;
+      border-#{$position}-right-radius: $amount;
+
+    } @else {
+      // top-left or top-right or bottom-left or bottom-right
+      -webkit-border-#{$position}-radius: $amount;
+      -moz-border-#{$position}-radius: $amount;
+      border-#{$position}-radius: $amount;
+    }
+  } @else {
+
+    -webkit-border-radius: $amount;
+    -moz-border-radius: $amount;
+    border-radius: $amount;
+  }
+}
+
+.panel-title{
+    font-family: HelveticaNeueCondensedBold;
+    line-height: 24px;
+}
+
+.panel-heading-custom, .panel-body-custom{
+	padding: 8px;
+    overflow: auto !important;
+}
+
+.panel-footer-custom{
+    padding: 5px;
+}
+
+.list-group-custom{
+	padding: 8px;
+
+	h5, p{
+		margin: 3px 0;
+	}
+}
+
+.panel-link-bottom{
+    padding-left: 10px;
+    font-size: 80%;
+    color:#999;
+    margin-bottom: 10px !important;
+}

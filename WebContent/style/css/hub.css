@@ -1,0 +1,22 @@
+/*-------------------------------rounded----------------------------*/
+.panel-title {
+  font-family: HelveticaNeueCondensedBold;
+  line-height: 24px; }
+
+.panel-heading-custom, .panel-body-custom {
+  padding: 8px;
+  overflow: auto !important; }
+
+.panel-footer-custom {
+  padding: 5px; }
+
+.list-group-custom {
+  padding: 8px; }
+  .list-group-custom h5, .list-group-custom p {
+    margin: 3px 0; }
+
+.panel-link-bottom {
+  padding-left: 10px;
+  font-size: 80%;
+  color: #999;
+  margin-bottom: 10px !important; }

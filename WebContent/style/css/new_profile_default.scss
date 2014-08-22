@@ -1,0 +1,193 @@
+$main-color: #3a3a3a;
+$small-margin:5px;
+$medium-margin: 10px;
+$large-margin: 25px;
+$xlarge-margin: 50px;
+$corporate-color: #2350a0;
+$icon-color:#e8ba00;
+$light-color:#a3a3a3;
+$no-margin: 0px;
+$inactiveColor:#999;
+
+/*-------------------------------rounded----------------------------*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin rounded($amount: "5px",$position: null) {
+  @if $position != null {
+    @if $position == "top" or $position == "bottom" {
+      //top or bottom
+      -webkit-border-#{$position}-left-radius: $amount;
+      -moz-border-#{$position}-left-radius: $amount;
+      border-#{$position}-left-radius: $amount;
+
+      -webkit-border-#{$position}-right-radius: $amount;
+      -moz-border-#{$position}-right-radius: $amount;
+      border-#{$position}-right-radius: $amount;
+
+    } @else {
+      // top-left or top-right or bottom-left or bottom-right
+      -webkit-border-#{$position}-radius: $amount;
+      -moz-border-#{$position}-radius: $amount;
+      border-#{$position}-radius: $amount;
+    }
+  } @else {
+
+    -webkit-border-radius: $amount;
+    -moz-border-radius: $amount;
+    border-radius: $amount;
+  }
+}
+
+.detail-information-container{
+    overflow: auto;
+
+    .header-information{
+        font: 18px HelveticaNeueCondensedBold;
+        margin-bottom: 3px;
+    }
+
+    .sub-header-information{
+        margin-bottom: 3px;
+        font-family: HelveticaNeueCondensedBold;
+        color: #666;
+    }
+    small{
+        color: $light-color;
+        margin-bottom: 3px;
+    }
+
+    .party-summary-information-wrapper{
+        background: url(../images/black_70.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px 10px;
+        color: #fff;
+        height: 100%;
+
+        .lead-helvetica{
+        	margin-top: 0;
+        	margin-bottom: 0;
+        }
+
+        .sub-lead-helvetica{
+        	margin-top: 0;
+        }
+
+        small{
+            color: #fff;
+        }
+
+        p{
+            font-size: small;
+        }
+    }
+
+    .party-picture-wrapper{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        @include rounded(5px);
+
+    }
+
+    .preferences-button{
+        color: #fff;
+        border: none;
+        background: none;
+        position: absolute;
+        bottom: 22%;
+        right: 7%;
+        font-size: large;
+        z-index: 999;
+        padding: 1px 5px;
+    }
+}
+
+.wrapper-image-background{
+    position: relative;
+    height: 100%;
+    padding: 0;
+    z-index: 999;
+}
+
+.party-summary-information-wrapper{
+    background: url(../images/black_70.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    color: #fff;
+    height: 100%;
+
+    .lead-helvetica{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sub-lead-helvetica{
+        margin-top: 0;
+    }
+
+    small{
+        color: #fff;
+    }
+
+    p{
+        font-size: small;
+    }
+}
+
+
+.panel-title{
+    font-family: HelveticaNeueCondensedBold;
+    line-height: 24px;
+}
+
+.panel-heading-custom, .panel-body-custom{
+	padding: 8px;
+    overflow: auto !important;
+}
+
+.panel-footer-custom{
+    padding: 5px;
+}
+
+.list-group-custom{
+	padding: 8px;
+
+	h5, p{
+		margin: 3px 0;
+	}
+}
+
+.panel-link-bottom{
+    padding-left: 10px;
+    font-size: 80%;
+    color:#999;
+    margin-bottom: 10px !important;
+}
+
+.button-half{
+    background-color: #DDDDDD;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #DDDDDD);
+    border-color: #CCCCCC;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #333333;
+    display: inline-block;
+    overflow: hidden;
+    padding: 3px 10px 3px;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px #F0F0F0;
+    white-space: nowrap;
+    margin: 5px;
+}
